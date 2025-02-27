@@ -1,36 +1,36 @@
-// Create a class which ask the user to enter a sentence, and it should display count of 
-// each vowel type in the sentence. The program should continue till user enters a word 
-// “quit”. Display the total count of each vowel for all sentences.
+// Define class for Complex number with real and imaginary as data members. Create its 
+// constructor, overload the constructors. Also define addition method to add two 
+// complex objects.
 
-import java.util.Scanner;
+class ComplexNumber{
+	double realPart;
+	double imgPart;
 
-// class Vowel{
-// 	int vowel;
-// }
+	public ComplexNumber(double realPart, double imgPart){
+		this.realPart = realPart;
+		this.imgPart = imgPart;
+	}
+
+	// public ComplexNumber(double realPart){
+	// 	this.realPart = realPart;
+	// }
+
+	// public ComplexNumber(double imgPart){
+	// 	this.imgPart = imgPart;
+	// }
+
+	public void additionOfComplexNumber(ComplexNumber c){
+		double realPart = this.realPart + c.realPart;
+		double imgPart = this.imgPart + c.imgPart;
+		System.out.println("Addition of give Complex Number is = "+ realPart +" + "+ imgPart + "i");
+	}
+}
 
 public class P6B5{
 	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);
-		String str = new String();
-		int totalVowel = 0;
+		ComplexNumber c1 = new ComplexNumber(5, 6);
+		ComplexNumber c2 = new ComplexNumber(10, 9);
 
-		while(true){
-			System.out.println("Enter the Sentence :");
-			str = sc.nextLine();
-
-			if((str.equals("quit"))){
-				break;
-			}
-			else{
-				for(int i=0; i<str.length(); i++){
-					char vol = str.charAt(i);
-					if(vol == 'a' || vol == 'e' || vol == 'i' || vol == 'o' || vol == 'u' || vol == 'A' || vol == 'E' || vol == 'I' || vol == 'O' || vol == 'U'){
-						totalVowel++;
-					}
-				}
-			}
-		}
-
-		System.out.println("Total Vowel = "+totalVowel);
+		c1.additionOfComplexNumber(c2);
 	}
-} 
+}

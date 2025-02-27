@@ -31,7 +31,17 @@ class Time {
 		}
 		System.out.println("hour = "+hour);
 		System.out.println("minute = "+minute);
+	}
 
+	public void additionOfTime(int hour, int minute){
+		hour = hour + this.hour;
+		minute = minute + this.minute;
+		if(minute >= 60){
+			minute -= 60;
+			hour ++;
+		}
+		System.out.println("hour = "+hour);
+		System.out.println("minute = "+minute);
 	}
 }
 
