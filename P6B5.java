@@ -6,18 +6,15 @@ class ComplexNumber{
 	double realPart;
 	double imgPart;
 
+	public ComplexNumber(){
+		realPart = 0;
+		imgPart = 0;
+	}
+
 	public ComplexNumber(double realPart, double imgPart){
 		this.realPart = realPart;
 		this.imgPart = imgPart;
 	}
-
-	// public ComplexNumber(double realPart){
-	// 	this.realPart = realPart;
-	// }
-
-	// public ComplexNumber(double imgPart){
-	// 	this.imgPart = imgPart;
-	// }
 
 	public void additionOfComplexNumber(ComplexNumber c){
 		double realPart = this.realPart + c.realPart;
